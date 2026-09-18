@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 10px;
+  background: #050505;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  background: #000;
+  border: 3px solid #00ff88;
+  width: 600px;
+  max-width: 95vw;
+  height: auto;
+}
+
+.instructions {
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.mobile-text {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.controls button {
+  border: 2px solid #00ff88;
+  background: #111;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 15px 25px;
+  min-width: 80px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.controls button:active {
+  background: #00ff88;
+  color: black;
+  transform: scale(0.95);
+}
+
+#shootBtn {
+  background: #220000;
+  border-color: #ff3333;
+  font-size: 18px;
+}
+
+#shootBtn:active {
+  background: #ff3333;
+  color: white;
+}
+
+.restart-text {
+  color: #888;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* 📱 Phone */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .instructions {
+    font-size: 14px;
+  }
+
+  .mobile-text {
+    display: block;
+    color: #00ff88;
+  }
+
+  .controls {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .controls button {
+    padding: 14px 10px;
+    min-width: 75px;
+    font-size: 22px;
+  }
+
+  #shootBtn {
+    font-size: 15px;
+    padding: 14px 12px;
+  }
+
+  .restart-text {
+    font-size: 12px;
+  }
+}
