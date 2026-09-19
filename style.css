@@ -78,13 +78,41 @@ canvas {
   color: white;
 }
 
+/* Restart Button */
+
+.restart-btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: 2px solid #00ff88;
+  border-radius: 12px;
+  background: #111;
+  color: #00ff88;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.restart-btn:hover {
+  background: #00ff88;
+  color: #000;
+}
+
+.restart-btn:active {
+  transform: scale(0.95);
+  background: #00ff88;
+  color: #000;
+}
+
 .restart-text {
   color: #888;
   font-size: 14px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* 📱 Phone */
+
 @media (max-width: 600px) {
 
   body {
@@ -118,6 +146,12 @@ canvas {
   #shootBtn {
     font-size: 15px;
     padding: 14px 12px;
+  }
+
+  .restart-btn {
+    width: 180px;
+    padding: 14px;
+    font-size: 17px;
   }
 
   .restart-text {
