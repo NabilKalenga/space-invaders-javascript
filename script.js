@@ -617,7 +617,7 @@ function drawGameOver() {
   );
 
   ctx.fillText(
-    "Press R to restart",
+    "Press R or tap RESTART",
     canvas.width / 2,
     canvas.height / 2 + 75
   );
@@ -659,7 +659,7 @@ function drawWinScreen() {
   );
 
   ctx.fillText(
-    "Press R to play again",
+    "Press R or tap RESTART",
     canvas.width / 2,
     canvas.height / 2 + 75
   );
@@ -701,8 +701,11 @@ function restartGame() {
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 const shootBtn = document.getElementById("shootBtn");
+const restartBtn = document.getElementById("restartBtn");
 
+// =============================
 // LEFT BUTTON
+// =============================
 
 leftBtn.addEventListener("pointerdown", (event) => {
 
@@ -730,7 +733,9 @@ leftBtn.addEventListener("pointercancel", () => {
 
 });
 
+// =============================
 // RIGHT BUTTON
+// =============================
 
 rightBtn.addEventListener("pointerdown", (event) => {
 
@@ -758,13 +763,25 @@ rightBtn.addEventListener("pointercancel", () => {
 
 });
 
+// =============================
 // SHOOT BUTTON
+// =============================
 
 shootBtn.addEventListener("pointerdown", (event) => {
 
   event.preventDefault();
 
   shoot();
+
+});
+
+// =============================
+// RESTART BUTTON
+// =============================
+
+restartBtn.addEventListener("click", () => {
+
+  restartGame();
 
 });
 
